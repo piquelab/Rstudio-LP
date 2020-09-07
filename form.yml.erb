@@ -1,11 +1,9 @@
 ---
 cluster: "grid"
 
-#attributes:
-#  modules: "singularity r rstudio"
 
 form:
-#  - modules
+  - modules
   - qos
   - bc_num_hours
   - cores
@@ -13,8 +11,11 @@ form:
   - bc_email_on_started
 
 attributes:
-  modules: "grid-default"
-  extra_jupyter_args: ""
+  modules:
+    label: "Load modules (at least R)"
+    help: |
+        Space separated list of modules to load. You should pick at least a module with a working R (e.g. R, R/4.0.0, r/3.6.1), and any additional module that may be necessary for packages or system calls.  
+    value: "R"
   bc_num_hours:
     label: "Number of Hours:"
     help: |

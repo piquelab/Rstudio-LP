@@ -4,9 +4,9 @@ category: Interactive Apps
 subcategory: Servers
 role: batch_connect
 description: "This will launch an [RStudio Server] with `module load R`. If you are
-  part of Luca/Pique-Regi group *piquelab* that we should use by default. Please only
+  part of Luca/Pique-Regi group *piquelab*, we should use R by default. Please only
   request the resources that you need. There is a max walltime so your sessions will
-  be killed after that. The session behavior may be different than a standalone RStudio
+  be killed after that. The session behavior may be different than in a standalone RStudio
   server in terms of saving or reconnecting to a session that has been killed.  \r\n\r\n[RStudio
   Server]: https://rstudio.com/products/rstudio/\r\n[Wayne State University High Performance
   Computing Grid]: https://tech.wayne.edu/hpc "

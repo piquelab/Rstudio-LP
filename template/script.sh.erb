@@ -6,7 +6,12 @@ setup_env () {
 module load grid-default
 module unload python
 module load singularity
-module load R
+#module load R
+<%- unless context.modules.blank? -%>
+# Load additional modules (optional)
+module load <%= context.modules %>
+<%- end -%>
+
 #module load rstudio
 ##help([[ rstudio - loads rstudio with singularity environment for ondemand apps ]])
 ##whatis("loads rstudio with singularity environment for ondemand")
