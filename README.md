@@ -1,6 +1,6 @@
 # OnDemand Connect - RStudio Server
 
-This is an adapted repository from a template (https://github.com/OSC/bc_example_rstudio) using also templates from ![Wayne State University High Performance Grid](https://tech.wayne.edu/hpc). 
+This is an adapted repository from a template (https://github.com/OSC/bc_example_rstudio) using also templates from [Wayne State University High Performance Grid](https://tech.wayne.edu/hpc). 
 
 ## Prerequisites
 
