@@ -20,10 +20,10 @@ export RSTUDIO_SERVER_IMAGE="/wsu/apps/rserver-launcher-centos7.simg"
 export SINGULARITY_BINDPATH="/nfs,/etc,/media,/mnt,/opt,/srv,/usr,/var,/wsu"
 export PATH="$PATH:/usr/lib/rstudio-server/bin"
 export SINGULARITYENV_PATH=$PATH
-unset LD_LIBRARY_PATH
+##unset LD_LIBRARY_PATH
 unset SINGULARITYENV_LD_LIBRARY_PATH
-##export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64
-##export SINGULARITYENV_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64
+export SINGULARITYENV_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 }
 
 setup_env
