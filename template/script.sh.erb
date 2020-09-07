@@ -5,6 +5,7 @@ setup_env () {
 #module load rstudio_container 
 module load grid-default
 module unload python
+module load gnu7/7.3.0
 module load singularity
 #module load R
 <%- unless context.modules.blank? -%>
@@ -16,9 +17,11 @@ module load <%= context.modules %>
 ##help([[ rstudio - loads rstudio with singularity environment for ondemand apps ]])
 ##whatis("loads rstudio with singularity environment for ondemand")
 export RSTUDIO_SERVER_IMAGE="/wsu/apps/rserver-launcher-centos7.simg"
-export SINGULARITY_BINDPATH="/etc,/media,/mnt,/opt,/srv,/usr,/var,/wsu"
+export SINGULARITY_BINDPATH="/nfs,/etc,/media,/mnt,/opt,/srv,/usr,/var,/wsu"
 export PATH="$PATH:/usr/lib/rstudio-server/bin"
 export SINGULARITYENV_PATH=$PATH
+unset LD_LIBRARY_PATH
+unset SINGULARITYENV_LD_LIBRARY_PATH
 ##export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib64
 ##export SINGULARITYENV_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 }
