@@ -1,10 +1,6 @@
-# Batch Connect - Example RStudio Server
+# OnDemand Connect - RStudio Server
 
-![GitHub Release](https://img.shields.io/github/release/osc/bc_example_rstudio.svg)
-![GitHub License](https://img.shields.io/github/license/osc/bc_example_rstudio.svg)
-
-An example Batch Connect app that launches an RStudio server within a
-batch job.
+This is an adapted repository from a template (https://github.com/OSC/bc_example_rstudio) using also templates from ![Wayne State University High Performance Grid](https://tech.wayne.edu/hpc). 
 
 ## Prerequisites
 
