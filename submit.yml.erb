@@ -1,0 +1,24 @@
+
+<%-
+cores_number = cores.blank? ? 1 : cores.to_i
+memory_amount = memory.blank? ? 1 : memory.to_i
+%>
+
+---
+
+script:
+  email: <%= ENV["USER"] %>@wayne.edu
+  wall_time: <%= (bc_num_hours.blank? ? 24 : bc_num_hours.to_i) * 3600 %>
+  native:
+    - "-J"
+    - "OnDemand: Rstudio Piquelab"
+    - "-q"
+    - "<%= qos %>"
+    - "-N"
+    - "1-1"
+    - "-n"
+    - "<%= cores_number %>"
+    - "--mem=<%= memory_amount %>G"
+    - "-t"
+    - "<%= (bc_num_hours.blank? ? 24 : bc_num_hours.to_i) * 60 %>"
+

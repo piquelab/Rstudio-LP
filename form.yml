@@ -1,0 +1,53 @@
+---
+cluster: "grid"
+
+#attributes:
+#  modules: "singularity r rstudio"
+
+form:
+#  - modules
+  - qos
+  - bc_num_hours
+  - cores
+  - memory
+  - bc_email_on_started
+
+attributes:
+  modules: "grid-default"
+  extra_jupyter_args: ""
+  bc_num_hours:
+    label: "Number of Hours:"
+    help: |
+      Amount of time you require, 48 hours is the limit. Please only request a reasonable amount of time so that others may make use of these limited resources.
+    min: 1
+    max: 48
+    step: 1
+  qos:
+    widget: "select"
+    label: "QoS:"
+    value: "primary"
+    options:
+    - ["primary: faster compute cores, busier", "primary"]
+    - ["secondary: older compute cores, less busy", "secondary"]
+    - ["express: your compute cores, only if you own some", "express"]
+    id: 'qos'
+  cores:
+    widget: "number_field"
+    label: "Number of CPU cores [ 1 - 32 ]"
+    value: 1
+    help: |
+      Number of cores on a single node in the wsuq, 1 - 32 cores are the limits.
+    min: 1
+    max: 32
+    step: 1
+    id: 'cores'
+  memory:
+    widget: "number_field"
+    label: "Amount of RAM in GB [ 1 - 1400 ]:"
+    value: 1
+    help: |
+      Amount of RAM in GB on a single node in the Grid, 1,400 GB of RAM is the limit.
+    min: 1
+    max: 1400
+    step: 1
+    id: 'memory'
