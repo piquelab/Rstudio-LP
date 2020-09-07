@@ -3,12 +3,11 @@ name: RStudio LP-lab
 category: Interactive Apps
 subcategory: Servers
 role: batch_connect
-description: "This will launch an [RStudio Server] with `module load R`, that is the
-  R version installed by the Luca/Pique-Regi group *piquelab*. Please only request
-  the resources that you need. There is a 24 hour walltime so your sessions will be
-  killed after 24 hours. RStudio can restore to the same point you if you launch again
-  so don't worry, but you may lose the last command. Please note that only one session
-  will be active, even if you submit more that one of these jobs, you will only have
-  one Rstudio session/user. \r\n\r\n[RStudio Server]: https://rstudio.com/products/rstudio/\r\n[Wayne
-  State University High Performance Computing Grid]: https://tech.wayne.edu/hpc \r\n"
+description: "This will launch an [RStudio Server] with `module load R`. If you are
+  part of Luca/Pique-Regi group *piquelab* that we should use by default. Please only
+  request the resources that you need. There is a max walltime so your sessions will
+  be killed after that. The session behavior may be different than a standalone RStudio
+  server in terms of saving or reconnecting to a session that has been killed.  \r\n\r\n[RStudio
+  Server]: https://rstudio.com/products/rstudio/\r\n[Wayne State University High Performance
+  Computing Grid]: https://tech.wayne.edu/hpc "
 icon: ''

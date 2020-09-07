@@ -46,7 +46,7 @@ attributes:
     label: "Amount of RAM in GB [ 1 - 1400 ]:"
     value: 1
     help: |
-      Amount of RAM in GB on a single node in the Grid, 1,400 GB of RAM is the limit.
+      Amount of RAM in GB on a single node. 1,400 GB of RAM is the limit. Please do not ask for much more than you need. Consider restarting if you later find out you need more. 
     min: 1
     max: 1400
     step: 1
